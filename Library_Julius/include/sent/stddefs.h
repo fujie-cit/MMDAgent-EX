@@ -53,6 +53,8 @@
 # include <sent/config-ubuntu-libsent.h>
 #elif USE_PREGENERATED_CONFIG_APPLE_M
 # include <sent/config-apple-m-libsent.h>
+#elif USE_PREGENERATED_CONFIG_APPLE_INTEL
+# include <sent/config-apple-intel-libsent.h>
 #else
 #include <sent/config.h>
 #endif

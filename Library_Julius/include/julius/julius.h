@@ -41,6 +41,9 @@
 #elif USE_PREGENERATED_CONFIG_APPLE_M
 # include <julius/config-apple-m-libjulius.h>
 # include <sent/config-apple-m-libsent.h>
+#elif USE_PREGENERATED_CONFIG_APPLE_INTEL
+# include <julius/config-apple-intel-libjulius.h>
+# include <sent/config-apple-intel-libsent.h>
 #else
 #include <julius/config.h>
 #include <sent/config.h>

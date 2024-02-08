@@ -221,9 +221,15 @@ set(DEFS_PUBLIC
     MMDAGENT
 )
 if(APPLE)
-    list(APPEND DEFS_PUBLIC
-        USE_PREGENERATED_CONFIG_APPLE_M
-    )
+    if(${ARCH} MATCHES "arm64")
+        list(APPEND DEFS_PUBLIC
+            USE_PREGENERATED_CONFIG_APPLE_M
+        )
+    else()
+        list(APPEND DEFS_PUBLIC
+            USE_PREGENERATED_CONFIG_APPLE_INTEL
+        )
+    endif()
 else()
     list(APPEND DEFS_PUBLIC
         USE_PREGENERATED_CONFIG_UBUNTU
